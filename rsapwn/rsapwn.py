@@ -211,7 +211,7 @@ def main():
         "--gen-public",
         dest="gen_pub",
         action="store_true",
-        help="Genarate public key file insted of private.",
+        help="Generate public key file instead of private.",
     )
     parser.add_argument(
         "-o",

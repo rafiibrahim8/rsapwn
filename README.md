@@ -19,7 +19,7 @@ $ rsapwn [OPTIONS]
 ```
 -h, --help           show this help message and exit
 -k PATH, --key PATH  Try generating from key file.
--x, --gen-public     Genarate public key file insted of private.
+-x, --gen-public     Generate public key file instead of private
 -o PATH, --out PATH  Save key into a file instead of printing.
 -w, --weak           Use Fermat's Factorization Algorithm. If factorDB.com fails.
 -s, --silent         Silent mode.
