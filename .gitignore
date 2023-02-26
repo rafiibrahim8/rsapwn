@@ -1,7 +1,2 @@
-.vscode
-bin
-include
-lib
-stuffs
 __pycache__
-test.py
+runner.py

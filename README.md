@@ -1,5 +1,7 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 # rsapwn
-#### Generate OpenSSL compilable private or public key form public key or RSA parameters. 
+#### Generate OpenSSL compilable private or public key form public key or RSA parameters. Mostly used for CTFs.
 
 # INSTALLATION
 From a command line enter the command to install rsapwn
@@ -17,8 +19,10 @@ $ rsapwn [OPTIONS]
 ```
 -h, --help           show this help message and exit
 -k PATH, --key PATH  Try generating from key file.
--x, --gen-public     Generate public key file instead of private.
+-x, --gen-public     Genarate public key file insted of private.
 -o PATH, --out PATH  Save key into a file instead of printing.
+-w, --weak           Use Fermat's Factorization Algorithm. If factorDB.com fails.
+-s, --silent         Silent mode.
 -p VALUE             1st prime value of RSA key.
 -q VALUE             2nd prime value of RSA key.
 -n VALUE             n value of RSA key.
@@ -70,7 +74,4 @@ iYHCgJ7mkdmAZcQF+GkcJ3IvqOid2S7PFkIFrRQ51g==
 ```
 
 # How does it work?
-The program tries to find factor of  `n` from [FactorDB.com](http://factordb.com) the uses pythons [`pycryptodome`](https://github.com/Legrandin/pycryptodome/) to generate RSA private key. You can also generate public key from RSA parameters with this program.
-
-# Acknowledgments
-[user448810](https://stackoverflow.com/users/448810/user448810) for code of calculating `d`.
+The program tries to find factor of  `n` from [FactorDB.com](http://factordb.com) then uses pythons [`pycryptodomex`](https://github.com/Legrandin/pycryptodome/) to generate RSA private key. If the factor of `n` cannot be found on FactorDB.com, the program provides an option to factor `n` using *Fermat's Factorization Algorithm* (if the primes are [not secure](https://www.youtube.com/watch?v=-ShwJqAalOk)). You can also generate public key from RSA parameters with this program.
