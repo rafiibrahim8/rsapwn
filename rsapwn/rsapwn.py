@@ -166,7 +166,7 @@ class Pwn:
                     _logger.error(err)
                     exit(1)
                 _logger.info(err)
-                _logger.info("Trying weak primes factorization...")
+                _logger.info(f"Trying weak primes factorization of {n} ...")
                 pq = self.__wpf.factorize(n)
             if not pq:
                 return
